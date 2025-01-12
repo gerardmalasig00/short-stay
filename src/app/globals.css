@@ -3,19 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f4ff;
+  --foreground: #4b5563;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #4b5563;
+    --foreground: #f7f4ff;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", sans-serif;
+}
+
+@layer utilities {
+  .btn {
+    @apply bg-primary rounded-md text-white w-full font-medium px-3.5 h-12  hover:bg-dark focus:ring focus:ring-secondary;
+  }
+
+  .field {
+    @apply flex flex-col gap-2 text-dark font-medium text-sm;
+  }
+
+  .input-field {
+    @apply text-input-color bg-input-bg px-4 py-3 rounded-lg hover:bg-input-bg-dark focus:ring-1 focus:ring-secondary focus:outline-none;
+  }
+
+  .error {
+    @apply border border-red-500 focus:ring-red-500;
+  }
+
+  .card {
+    @apply w-full sm:w-[438px] md:w-[442px] bg-white shadow-lg py-6 px-4 sm:p-8 flex flex-col space-y-6 rounded-xl;
+  }
 }
