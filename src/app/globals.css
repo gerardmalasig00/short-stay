@@ -30,7 +30,7 @@ body {
   }
 
   .input-field {
-    @apply text-input-color bg-input-bg px-4 py-3 rounded-lg hover:bg-input-bg-dark focus:ring-1 focus:ring-secondary focus:outline-none;
+    @apply w-full text-input-color bg-input-bg px-4 py-3 rounded-lg hover:bg-input-bg-dark focus:ring-1 focus:ring-secondary focus:outline-none;
   }
 
   .error {

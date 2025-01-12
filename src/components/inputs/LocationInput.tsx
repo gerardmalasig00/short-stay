@@ -29,15 +29,17 @@ const LocationInput = ({
   return (
     <div className="field">
       <label htmlFor={name}>{label}</label>
-      <input
-        name={name}
-        value={value}
-        className={`input-field ${error && "error"}`}
-        placeholder={placeholder}
-        type="text"
-        onChange={handleChange}
-      />
-      {error && <p className="text-xs text-red-500">{error}</p>}
+      <div className="w-full">
+        <input
+          name={name}
+          value={value}
+          className={`input-field ${error && "error"}`}
+          placeholder={placeholder}
+          type="text"
+          onChange={handleChange}
+        />
+        {error && <p className="text-xs text-red-500">{error}</p>}
+      </div>
     </div>
   );
 };

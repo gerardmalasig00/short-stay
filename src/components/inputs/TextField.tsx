@@ -18,9 +18,9 @@ const TextField = ({
   error,
 }: TextFieldProps) => {
   return (
-    <div className="field">
+    <div className="field w-full">
       <label htmlFor={name}>{label}</label>
-      <div>
+      <div className="w-full">
         <input
           name={name}
           className={`input-field ${error && "error"}`}

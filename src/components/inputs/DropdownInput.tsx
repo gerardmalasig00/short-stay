@@ -24,21 +24,23 @@ const DropdownInput = ({
   return (
     <div className="field">
       <label htmlFor={name}> {label}</label>
-      <select
-        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-          if (onChange) onChange(e);
-        }}
-        name={name}
-        className={`input-field ${error && "error"}`}
-      >
-        <option value="">{emptyLabel}</option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-      {error && <p className="text-xs text-red-500">{error}</p>}
+      <div className="w-full">
+        <select
+          onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+            if (onChange) onChange(e);
+          }}
+          name={name}
+          className={`input-field ${error && "error"}`}
+        >
+          <option value="">{emptyLabel}</option>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        {error && <p className="text-xs text-red-500">{error}</p>}
+      </div>
     </div>
   );
 };
