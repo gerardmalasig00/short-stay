@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 interface TextFieldProps {
   name: string;
@@ -18,8 +18,8 @@ const LocationInput = ({
   onChange,
   error,
 }: TextFieldProps) => {
-  const places = ["Europe", "Asia", "North America", "South America"];
-  const [suggestion, setSuggestion] = useState("");
+  // const places = ["Europe", "Asia", "North America", "South America"];
+  // const [suggestion, setSuggestion] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) onChange(e);
